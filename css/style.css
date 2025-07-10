@@ -1,0 +1,69 @@
+/* Estilos existentes */
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.hero-gradient {
+    background: radial-gradient(ellipse at center, #1f2937, #111827);
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(55, 65, 81, 0), rgba(55, 65, 81, 0.75), rgba(55, 65, 81, 0));
+}
+
+.card-base {
+    background-color: #1f2937;
+    border: 1px solid #374151;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-base:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(251, 191, 36, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); }
+}
+
+/* Estilos para o conteúdo dos artigos */
+.article-content h1 { font-size: 2.25rem; line-height: 2.5rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem; }
+.article-content h3 { font-size: 1.5rem; line-height: 2rem; font-weight: 700; color: #f59e0b; margin-top: 2rem; margin-bottom: 1rem; }
+.article-content p { line-height: 1.75; margin-bottom: 1.5rem; }
+.article-content ul, .article-content ol { margin-left: 1.5rem; margin-bottom: 1.5rem; list-style-position: outside; }
+.article-content ul { list-style-type: disc; }
+.article-content ol { list-style-type: decimal; }
+.article-content li { margin-bottom: 0.75rem; padding-left: 0.5rem; }
+.article-content a { color: #38bdf8; text-decoration: underline; transition: color 0.3s; }
+.article-content a:hover { color: #7dd3fc; }
+.article-content strong { color: #f3f4f6; }
+
+/* NOVO: Estilos para a barra de rolagem do Modal de Artigos */
+#article-modal-body {
+    scrollbar-width: thin;
+    scrollbar-color: #4b5563 #1f2937; /* Cor do thumb e do track */
+}
+
+#article-modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+#article-modal-body::-webkit-scrollbar-track {
+    background: transparent; /* Fundo da barra */
+}
+
+#article-modal-body::-webkit-scrollbar-thumb {
+    background-color: #4b5563; /* Cor da barra */
+    border-radius: 10px;
+    border: 2px solid #1f2937; /* Espaçamento ao redor da barra */
+}
