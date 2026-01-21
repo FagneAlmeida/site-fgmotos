@@ -5,33 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oficina FG Motos - Sua Especialista em Duas Rodas</title>
     
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
 
+    <!-- Meta Tags para SEO -->
     <meta name="description" content="Oficina de motos especializada em Campo Grande, MS. Oferecemos revisão completa, troca de óleo premium, balanceamento, injeção eletrônica, e somos parceiros oficiais Turboost. Qualidade e confiança para sua motocicleta.">
     <meta name="keywords" content="oficina de motos, campo grande ms, fg motos, revisão de moto, troca de oleo, motul, turboost, big trail, fagne, gabriella">
     <meta name="author" content="Oficina FG Motos">
 
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <!-- Nosso Arquivo de Estilo CSS -->
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body class="text-gray-200 bg-gray-900">
 
+    <!-- CABEÇALHO -->
     <header id="main-header" class="sticky top-0 left-0 w-full z-20 p-4 md:p-6 bg-gray-900/80 backdrop-blur-sm border-b border-gray-800">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="block back-to-home-logo">
-                <img src="images/logo.jpg" alt="Logo da Oficina FG Motos" class="h-12 md:h-14 w-auto rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/100x56/1f2937/f59e0b?text=FG+Motos';">
+                <img src="images/logo.jpg" alt="Logo da Oficina FG Motos" class="h-12 md:h-14 w-auto rounded-lg">
             </a>
             <nav class="hidden md:flex items-center gap-6">
+                <a href="#diagnostico-ia" class="text-gray-300 hover:text-amber-400 transition-colors duration-300 font-medium">Diagnóstico IA</a>
                 <a href="#sobre" class="text-gray-300 hover:text-amber-400 transition-colors duration-300 font-medium">Sobre</a>
                 <a href="#servicos" class="text-gray-300 hover:text-amber-400 transition-colors duration-300 font-medium">Serviços</a>
                 <a href="#galeria" class="text-gray-300 hover:text-amber-400 transition-colors duration-300 font-medium">Galeria</a>
@@ -44,6 +52,7 @@
             </div>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <a href="#diagnostico-ia" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700">Diagnóstico IA</a>
             <a href="#sobre" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700">Sobre Nós</a>
             <a href="#servicos" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700">Serviços</a>
             <a href="#galeria" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700">Galeria</a>
@@ -53,8 +62,10 @@
         </div>
     </header>
 
+    <!-- Conteúdo principal -->
     <div id="main-content">
         <main>
+            <!-- SEÇÃO PRINCIPAL (HERO) -->
             <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient pt-20">
                 <div class="container mx-auto px-4 z-10">
                     <div class="grid md:grid-cols-2 gap-8 items-center">
@@ -65,13 +76,51 @@
                         </div>
                         <div class="flex justify-center items-center mt-12 md:mt-0">
                             <div class="relative">
-                                <img src="images/centelha-assistente.png" alt="Centelha, a assistente virtual da Oficina FG Motos" class="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain" onerror="this.onerror=null;this.src='https://placehold.co/384x384/111827/ffffff?text=Centelha';">
+                                <img src="images/centelha-assistente.png" alt="Centelha, a assistente virtual da Oficina FG Motos" class="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain">
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            
+            <hr class="section-divider">
 
+            <!-- NOVA SEÇÃO: DIAGNÓSTICO IA -->
+            <section id="diagnostico-ia" class="py-16 sm:py-24">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-3xl mx-auto text-center">
+                        <h2 class="text-3xl font-bold text-white mb-2">Diagnóstico Inteligente ✨</h2>
+                        <p class="text-gray-400 mb-8">Descreva o problema da sua moto e receba um pré-diagnóstico instantâneo da nossa IA.</p>
+                    </div>
+                    <form id="diag-form" class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="diag-moto-model" class="block text-sm font-medium text-gray-300 mb-2">Marca e Modelo da Moto</label>
+                            <input type="text" name="diag-moto-model" id="diag-moto-model" required class="w-full bg-gray-800 border-gray-700 text-white rounded-lg p-3 focus:ring-amber-500 focus:border-amber-500" placeholder="Ex: Honda CB 500X">
+                        </div>
+                        <div>
+                            <label for="diag-moto-year" class="block text-sm font-medium text-gray-300 mb-2">Ano</label>
+                            <input type="number" name="diag-moto-year" id="diag-moto-year" required class="w-full bg-gray-800 border-gray-700 text-white rounded-lg p-3 focus:ring-amber-500 focus:border-amber-500" placeholder="Ex: 2022">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="diag-problem" class="block text-sm font-medium text-gray-300 mb-2">Descreva o problema</label>
+                            <textarea id="diag-problem" name="diag-problem" rows="4" required class="w-full bg-gray-800 border-gray-700 text-white rounded-lg p-3 focus:ring-amber-500 focus:border-amber-500" placeholder="Ex: Barulho estranho no motor ao acelerar, dificuldade para engatar a primeira marcha..."></textarea>
+                        </div>
+                        <div class="md:col-span-2 text-center">
+                            <button type="submit" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-br from-sky-500 to-sky-600 text-white font-bold rounded-full text-lg shadow-lg transition-transform duration-300 hover:scale-105">
+                                <i data-lucide="sparkles" class="w-6 h-6"></i>
+                                Obter Pré-Diagnóstico com IA
+                            </button>
+                        </div>
+                    </form>
+                    <div id="ai-diagnosis-result" class="max-w-3xl mx-auto mt-8">
+                        <!-- O resultado da IA aparecerá aqui -->
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- SEÇÃO SOBRE NÓS -->
             <section id="sobre" class="py-16 sm:py-24 bg-gray-900">
                 <div class="container mx-auto px-4">
                     <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -85,7 +134,7 @@
                             </div>
                         </div>
                         <div class="mt-10 lg:mt-0 clickable-image cursor-pointer">
-                            <img src="images/fundadores-fagne-gabriella.jpg" alt="Fagne e Gabriella, fundadores da Oficina FG Motos" class="w-full h-auto object-cover rounded-2xl shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1f2937/ffffff?text=Fundadores';">
+                            <img src="images/fundadores-fagne-gabriella.jpg" alt="Fagne e Gabriella, fundadores da Oficina FG Motos" class="w-full h-auto object-cover rounded-2xl shadow-lg">
                             <p class="text-center text-gray-400 mt-2 text-sm">Fagne e Gabriella - Fundadores</p>
                         </div>
                     </div>
@@ -94,26 +143,28 @@
             
             <hr class="section-divider">
 
+            <!-- SEÇÃO DE SERVIÇOS -->
             <section id="servicos" class="py-16 sm:py-24">
                 <div class="container mx-auto px-4 text-center">
                     <h2 class="text-3xl font-bold text-white mb-2">Nossos Serviços Especializados</h2>
                     <p class="text-gray-400 mb-12 max-w-2xl mx-auto">Tecnologia de ponta e os melhores produtos para cuidar da sua moto.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><img src="images/servico-pneu.jpg" alt="Troca de Pneu" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x200/1f2937/808080?text=Troca+de+Pneu';"><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold text-white mb-2 flex items-center gap-3"><i data-lucide="wrench" class="w-6 h-6 text-amber-400"></i><span>Troca de Pneu</span></h3><p class="text-gray-400 flex-grow mb-4">Usamos ferramentas modernas e seguras, protegemos a roda para não danificar, conferimos a vedação e a calibragem antes de concluir o serviço.</p><a href="#agendamento" class="font-semibold text-sky-400 hover:text-sky-300 mt-auto self-start transition-colors">Agendar Serviço &rarr;</a></div></div>
-                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><img src="images/servico-balanceamento.jpg" alt="Balanceamento Inteligente" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x200/1f2937/808080?text=Balanceamento';"><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold text-white mb-2 flex items-center gap-3"><i data-lucide="scaling" class="w-6 h-6 text-amber-400"></i><span>Balanceamento Inteligente</span></h3><p class="text-gray-400 flex-grow mb-4">Utilizamos o Micres, um balanceamento com microesferas que se ajustam para um equilíbrio perfeito, melhorando o desgaste e eliminando vibrações.</p><a href="#agendamento" class="font-semibold text-sky-400 hover:text-sky-300 mt-auto self-start transition-colors">Agendar Serviço &rarr;</a></div></div>
-                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><img src="images/servico-eletrico.jpg" alt="Testes Elétricos Avançados" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x200/1f2937/808080?text=Testes+Elétricos';"><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold text-white mb-2 flex items-center gap-3"><i data-lucide="zap" class="w-6 h-6 text-amber-400"></i><span>Testes Elétricos Avançados</span></h3><p class="text-gray-400 flex-grow mb-4">Com osciloscópio de última geração, identificamos falhas invisíveis e analisamos a saúde e a vida útil da sua bateria com precisão.</p><a href="#agendamento" class="font-semibold text-sky-400 hover:text-sky-300 mt-auto self-start transition-colors">Agendar Serviço &rarr;</a></div></div>
-                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><img src="images/servico-injecao.jpg" alt="Diagnóstico de Injeção" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x200/1f2937/808080?text=Injeção+Eletrônica';"><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold text-white mb-2 flex items-center gap-3"><i data-lucide="cpu" class="w-6 h-6 text-amber-400"></i><span>Diagnóstico de Injeção</span></h3><p class="text-gray-400 flex-grow mb-4">Com o scanner Raster da Chiptronic, lemos com precisão os sensores e atuadores, identificando e limpando códigos de falha do motor.</p><a href="#agendamento" class="font-semibold text-sky-400 hover:text-sky-300 mt-auto self-start transition-colors">Agendar Serviço &rarr;</a></div></div>
-                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><img src="images/servico-suspensao.jpg" alt="Revisão de Suspensões" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x200/1f2937/808080?text=Suspensão';"><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold text-white mb-2 flex items-center gap-3"><i data-lucide="sliders-horizontal" class="w-6 h-6 text-amber-400"></i><span>Revisão de Suspensões</span></h3><p class="text-gray-400 flex-grow mb-4">Serviços especializados com produtos de alta qualidade como Ariete e Motul para garantir conforto, controle e estabilidade na pilotagem.</p><a href="#agendamento" class="font-semibold text-sky-400 hover:text-sky-300 mt-auto self-start transition-colors">Agendar Serviço &rarr;</a></div></div>
-                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><img src="images/servico-oleo.jpg" alt="Troca de Óleo Premium" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x200/1f2937/808080?text=Troca+de+Óleo';"><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold text-white mb-2 flex items-center gap-3"><i data-lucide="droplet" class="w-6 h-6 text-amber-400"></i><span>Troca de Óleo Premium</span></h3><p class="text-gray-400 flex-grow mb-4">Garantimos a durabilidade do motor com os melhores óleos Motul e filtros (Mahle, Tecfil, Hiflo), seguindo as especificações para sua moto.</p><a href="#agendamento" class="font-semibold text-sky-400 hover:text-sky-300 mt-auto self-start transition-colors">Agendar Serviço &rarr;</a></div></div>
-                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><div class="w-full h-40 bg-gray-800 flex items-center justify-center p-4"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-sky-500"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="m9 14 2 2 4-4"></path></svg></div><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold text-white mb-2 flex items-center gap-3"><i data-lucide="clipboard-check" class="w-6 h-6 text-amber-400"></i><span>Revisão Essencial</span></h3><p class="text-gray-400 flex-grow mb-4">Ideal para prevenir falhas. Inclui troca de óleo e filtros, verificação de freios, parte elétrica, cabos e sinalização para sua moto rodar segura.</p><a href="#agendamento" class="font-semibold text-sky-400 hover:text-sky-300 mt-auto self-start transition-colors">Agendar Serviço &rarr;</a></div></div>
-                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><div class="w-full h-40 bg-gray-800 flex items-center justify-center p-4"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg></div><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold text-white mb-2 flex items-center gap-3"><i data-lucide="clipboard-list" class="w-6 h-6 text-amber-400"></i><span>Revisão Completa</span></h3><p class="text-gray-400 flex-grow mb-4">Além dos itens da Essencial, inspecionamos chassi, balança, coluna de direção, rodas, e realizamos a descarbonização do TBI.</p><a href="#agendamento" class="font-semibold text-sky-400 hover:text-sky-300 mt-auto self-start transition-colors">Agendar Serviço &rarr;</a></div></div>
-                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><div class="w-full h-40 bg-gray-800 flex items-center justify-center p-4"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg></div><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold text-white mb-2 flex items-center gap-3"><i data-lucide="award" class="w-6 h-6 text-amber-400"></i><span>Revisão Premium</span></h3><p class="text-gray-400 flex-grow mb-4">Tudo da Revisão Completa mais um pacote de descontaminação, revitalização e proteção com coat cerâmico que dura até 3 anos.</p><a href="#agendamento" class="font-semibold text-sky-400 hover:text-sky-300 mt-auto self-start transition-colors">Agendar Serviço &rarr;</a></div></div>
+                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><a href="#" data-service="troca-de-pneu" class="block cursor-pointer"><img src="images/servico-pneu.jpg" alt="Troca de Pneu" class="w-full h-40 object-cover"></a><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold text-white mb-2 flex items-center gap-3"><i data-lucide="wrench" class="w-6 h-6 text-amber-400"></i><span>Troca de Pneu</span></h3><p class="text-gray-400 flex-grow mb-4">Usamos ferramentas modernas e seguras, protegemos a roda para não danificar, conferimos a vedação e a calibragem antes de concluir o serviço.</p><a href="#" data-service="troca-de-pneu" class="font-semibold text-sky-400 hover:text-sky-300 mt-auto self-start transition-colors cursor-pointer">Ver Detalhes &rarr;</a></div></div>
+                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><a href="#" data-service="balanceamento" class="block cursor-pointer"><img src="images/servico-balanceamento.jpg" alt="Balanceamento Inteligente" class="w-full h-40 object-cover"></a><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold text-white mb-2 flex items-center gap-3"><i data-lucide="scaling" class="w-6 h-6 text-amber-400"></i><span>Balanceamento Inteligente</span></h3><p class="text-gray-400 flex-grow mb-4">Utilizamos o Micres, um balanceamento com microesferas que se ajustam para um equilíbrio perfeito, melhorando o desgaste e eliminando vibrações.</p><a href="#" data-service="balanceamento" class="font-semibold text-sky-400 hover:text-sky-300 mt-auto self-start transition-colors cursor-pointer">Ver Detalhes &rarr;</a></div></div>
+                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><a href="#" data-service="testes-eletricos" class="block cursor-pointer"><img src="images/servico-eletrico.jpg" alt="Testes Elétricos Avançados" class="w-full h-40 object-cover"></a><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold text-white mb-2 flex items-center gap-3"><i data-lucide="zap" class="w-6 h-6 text-amber-400"></i><span>Testes Elétricos Avançados</span></h3><p class="text-gray-400 flex-grow mb-4">Com osciloscópio de última geração, identificamos falhas invisíveis e analisamos a saúde e a vida útil da sua bateria com precisão.</p><a href="#" data-service="testes-eletricos" class="font-semibold text-sky-400 hover:text-sky-300 mt-auto self-start transition-colors cursor-pointer">Ver Detalhes &rarr;</a></div></div>
+                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><a href="#" data-service="diagnostico-injecao" class="block cursor-pointer"><img src="images/servico-injecao.jpg" alt="Diagnóstico de Injeção" class="w-full h-40 object-cover"></a><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold text-white mb-2 flex items-center gap-3"><i data-lucide="cpu" class="w-6 h-6 text-amber-400"></i><span>Diagnóstico de Injeção</span></h3><p class="text-gray-400 flex-grow mb-4">Com o scanner Raster da Chiptronic, lemos com precisão os sensores e atuadores, identificando e limpando códigos de falha do motor.</p><a href="#" data-service="diagnostico-injecao" class="font-semibold text-sky-400 hover:text-sky-300 mt-auto self-start transition-colors cursor-pointer">Ver Detalhes &rarr;</a></div></div>
+                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><a href="#" data-service="revisao-suspensao" class="block cursor-pointer"><img src="images/servico-suspensao.jpg" alt="Revisão de Suspensões" class="w-full h-40 object-cover"></a><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold text-white mb-2 flex items-center gap-3"><i data-lucide="sliders-horizontal" class="w-6 h-6 text-amber-400"></i><span>Revisão de Suspensões</span></h3><p class="text-gray-400 flex-grow mb-4">Serviços especializados com produtos de alta qualidade como Ariete e Motul para garantir conforto, controle e estabilidade na pilotagem.</p><a href="#" data-service="revisao-suspensao" class="font-semibold text-sky-400 hover:text-sky-300 mt-auto self-start transition-colors cursor-pointer">Ver Detalhes &rarr;</a></div></div>
+                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><a href="#" data-service="troca-de-oleo" class="block cursor-pointer"><img src="images/servico-oleo.jpg" alt="Troca de Óleo Premium" class="w-full h-40 object-cover"></a><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold text-white mb-2 flex items-center gap-3"><i data-lucide="oil-can" class="w-6 h-6 text-amber-400"></i><span>Troca de Óleo Premium</span></h3><p class="text-gray-400 flex-grow mb-4">Garantimos a durabilidade do motor com os melhores óleos Motul e filtros (Mahle, Tecfil, Hiflo), seguindo as especificações para sua moto.</p><a href="#" data-service="troca-de-oleo" class="font-semibold text-sky-400 hover:text-sky-300 mt-auto self-start transition-colors cursor-pointer">Ver Detalhes &rarr;</a></div></div>
+                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><a href="#" data-service="revisao-essencial" class="block cursor-pointer"><div class="w-full h-40 bg-gray-800 flex items-center justify-center p-4"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-sky-500"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="m9 14 2 2 4-4"></path></svg></div></a><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold text-white mb-2 flex items-center gap-3"><i data-lucide="clipboard-check" class="w-6 h-6 text-amber-400"></i><span>Revisão Essencial</span></h3><p class="text-gray-400 flex-grow mb-4">Ideal para prevenir falhas. Inclui troca de óleo e filtros, verificação de freios, parte elétrica, cabos e sinalização para sua moto rodar segura.</p><a href="#" data-service="revisao-essencial" class="font-semibold text-sky-400 hover:text-sky-300 mt-auto self-start transition-colors cursor-pointer">Ver Detalhes &rarr;</a></div></div>
+                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><a href="#" data-service="revisao-completa" class="block cursor-pointer"><div class="w-full h-40 bg-gray-800 flex items-center justify-center p-4"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg></div></a><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold text-white mb-2 flex items-center gap-3"><i data-lucide="clipboard-list" class="w-6 h-6 text-amber-400"></i><span>Revisão Completa</span></h3><p class="text-gray-400 flex-grow mb-4">Além dos itens da Essencial, inspecionamos chassi, balança, coluna de direção, rodas, e realizamos a descarbonização do TBI.</p><a href="#" data-service="revisao-completa" class="font-semibold text-sky-400 hover:text-sky-300 mt-auto self-start transition-colors cursor-pointer">Ver Detalhes &rarr;</a></div></div>
+                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><a href="#" data-service="revisao-premium" class="block cursor-pointer"><div class="w-full h-40 bg-gray-800 flex items-center justify-center p-4"><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-amber-400"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg></div></a><div class="p-6 flex flex-col flex-grow"><h3 class="text-xl font-bold text-white mb-2 flex items-center gap-3"><i data-lucide="award" class="w-6 h-6 text-amber-400"></i><span>Revisão Premium</span></h3><p class="text-gray-400 flex-grow mb-4">Tudo da Revisão Completa mais um pacote de descontaminação, revitalização e proteção com coat cerâmico que dura até 3 anos.</p><a href="#" data-service="revisao-premium" class="font-semibold text-sky-400 hover:text-sky-300 mt-auto self-start transition-colors cursor-pointer">Ver Detalhes &rarr;</a></div></div>
                     </div>
                 </div>
             </section>
 
             <hr class="section-divider">
 
+            <!-- SEÇÃO GALERIA -->
             <section id="galeria" class="py-16 sm:py-24">
                 <div class="container mx-auto px-4 text-center">
                     <h2 class="text-3xl font-bold text-white mb-2">Nossos Trabalhos em Destaque</h2>
@@ -133,6 +184,7 @@
 
             <hr class="section-divider">
 
+            <!-- SEÇÃO TURBOOST -->
             <section id="turboost" class="py-16 sm:py-24">
                 <div class="container mx-auto px-4">
                     <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -155,6 +207,7 @@
 
             <hr class="section-divider">
 
+            <!-- SEÇÃO DEPOIMENTOS -->
             <section id="depoimentos" class="py-16 sm:py-24">
                 <div class="container mx-auto px-4 text-center">
                     <h2 class="text-3xl font-bold text-white mb-2">O que nossos clientes dizem</h2>
@@ -169,45 +222,20 @@
 
             <hr class="section-divider">
 
+            <!-- SEÇÃO BLOG -->
             <section id="blog" class="py-16 sm:py-24">
                 <div class="container mx-auto px-4 text-center">
                     <h2 class="text-3xl font-bold text-white mb-2">Dicas da Nossa Oficina</h2>
                     <p class="text-gray-400 mb-12 max-w-2xl mx-auto">Conhecimento que compartilhamos para você cuidar ainda melhor da sua moto.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-                        
-                        <div class="card-base rounded-2xl overflow-hidden flex flex-col">
-                            <a href="#" data-article="freios" class="block cursor-pointer"><img src="images/blog-freios.jpg" alt="Sistema de freio de motocicleta" class="w-full h-48 object-cover"></a>
-                            <div class="p-6 flex flex-col flex-grow">
-                                <p class="text-sm text-sky-400 mb-2 font-semibold">Manutenção</p>
-                                <h3 class="text-xl font-bold text-white mb-3"><a href="#" data-article="freios" class="hover:text-amber-400 transition-colors cursor-pointer">5 Sinais que os Freios da sua Moto Pedem Socorro</a></h3>
-                                <p class="text-gray-400 mb-4 flex-grow">Aprenda a identificar os principais sinais de desgaste no sistema de freios e garanta sua segurança.</p>
-                                <a href="#" data-article="freios" class="font-semibold text-amber-400 hover:text-amber-300 cursor-pointer">Leia mais &rarr;</a>
-                            </div>
-                        </div>
-                        
-                        <div class="card-base rounded-2xl overflow-hidden flex flex-col">
-                            <a href="#" data-article="oleo" class="block cursor-pointer"><img src="images/blog-oleo.jpg" alt="Óleo sendo colocado no motor de uma moto" class="w-full h-48 object-cover"></a>
-                            <div class="p-6 flex flex-col flex-grow">
-                                <p class="text-sm text-sky-400 mb-2 font-semibold">Performance</p>
-                                <h3 class="text-xl font-bold text-white mb-3"><a href="#" data-article="oleo" class="hover:text-amber-400 transition-colors cursor-pointer">Como Escolher o Óleo Certo para o Motor da sua Moto</a></h3>
-                                <p class="text-gray-400 mb-4 flex-grow">Entenda a diferença entre os tipos de óleo e qual é o mais indicado para o seu modelo e estilo de pilotagem.</p>
-                                <a href="#" data-article="oleo" class="font-semibold text-amber-400 hover:text-amber-300 cursor-pointer">Leia mais &rarr;</a>
-                            </div>
-                        </div>
-
-                        <div class="card-base rounded-2xl overflow-hidden flex flex-col">
-                            <a href="#" data-article="balanceamento" class="block cursor-pointer"><img src="images/blog-balanceamento.png" alt="Roda de moto com produto de balanceamento Micres" class="w-full h-48 object-cover"></a>
-                            <div class="p-6 flex flex-col flex-grow">
-                                <p class="text-sm text-sky-400 mb-2 font-semibold">Segurança</p>
-                                <h3 class="text-xl font-bold text-white mb-3"><a href="#" data-article="balanceamento" class="hover:text-amber-400 transition-colors cursor-pointer">A Importância do Balanceamento para sua Segurança</a></h3>
-                                <p class="text-gray-400 mb-4 flex-grow">Descubra como um balanceamento correto pode prevenir acidentes e aumentar a vida útil dos pneus.</p>
-                                <a href="#" data-article="balanceamento" class="font-semibold text-amber-400 hover:text-amber-300 cursor-pointer">Leia mais &rarr;</a>
-                            </div>
-                        </div>
+                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><a href="#" data-article="freios" class="block cursor-pointer"><img src="images/blog-freios.jpg" alt="Sistema de freio de motocicleta" class="w-full h-48 object-cover"></a><div class="p-6 flex flex-col flex-grow"><p class="text-sm text-sky-400 mb-2 font-semibold">Manutenção</p><h3 class="text-xl font-bold text-white mb-3"><a href="#" data-article="freios" class="hover:text-amber-400 transition-colors cursor-pointer">5 Sinais que os Freios da sua Moto Pedem Socorro</a></h3><p class="text-gray-400 mb-4 flex-grow">Aprenda a identificar os principais sinais de desgaste no sistema de freios e garanta sua segurança.</p><a href="#" data-article="freios" class="font-semibold text-amber-400 hover:text-amber-300 cursor-pointer">Leia mais &rarr;</a></div></div>
+                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><a href="#" data-article="oleo" class="block cursor-pointer"><img src="images/blog-oleo.jpg" alt="Óleo sendo colocado no motor de uma moto" class="w-full h-48 object-cover"></a><div class="p-6 flex flex-col flex-grow"><p class="text-sm text-sky-400 mb-2 font-semibold">Performance</p><h3 class="text-xl font-bold text-white mb-3"><a href="#" data-article="oleo" class="hover:text-amber-400 transition-colors cursor-pointer">Como Escolher o Óleo Certo para o Motor da sua Moto</a></h3><p class="text-gray-400 mb-4 flex-grow">Entenda a diferença entre os tipos de óleo e qual é o mais indicado para o seu modelo e estilo de pilotagem.</p><a href="#" data-article="oleo" class="font-semibold text-amber-400 hover:text-amber-300 cursor-pointer">Leia mais &rarr;</a></div></div>
+                        <div class="card-base rounded-2xl overflow-hidden flex flex-col"><a href="#" data-article="balanceamento" class="block cursor-pointer"><img src="images/blog-balanceamento.png" alt="Roda de moto com produto de balanceamento Micres" class="w-full h-48 object-cover"></a><div class="p-6 flex flex-col flex-grow"><p class="text-sm text-sky-400 mb-2 font-semibold">Segurança</p><h3 class="text-xl font-bold text-white mb-3"><a href="#" data-article="balanceamento" class="hover:text-amber-400 transition-colors cursor-pointer">A Importância do Balanceamento para sua Segurança</a></h3><p class="text-gray-400 mb-4 flex-grow">Descubra como um balanceamento correto pode prevenir acidentes e aumentar a vida útil dos pneus.</p><a href="#" data-article="balanceamento" class="font-semibold text-amber-400 hover:text-amber-300 cursor-pointer">Leia mais &rarr;</a></div></div>
                     </div>
                 </div>
             </section>
 
+            <!-- SEÇÃO AGENDAMENTO -->
             <section id="agendamento" class="py-16 sm:py-24">
                 <div class="container mx-auto px-4">
                     <div class="max-w-3xl mx-auto text-center">
@@ -226,23 +254,19 @@
                 </div>
             </section>
             
+            <!-- SEÇÃO DO CHATBOT (INTEGRADO COM IFRAME) -->
             <section id="chatbot" class="py-16 sm:py-24 bg-gray-800/50">
                 <div class="container mx-auto px-4 text-center">
-                    <h2 class="text-3xl font-bold text-white mb-12">Ou se preferir, fale com a Centelha agora!</h2>
-                    <div class="max-w-4xl mx-auto">
-                        <iframe 
-                            src="https://oficina-fg-motos.web.app/" 
-                            loading="lazy"
-                            title="Chatbot Centelha - Assistente Virtual da Oficina FG Motos" 
-                            class="w-full h-[70vh] min-h-[500px] border-2 border-gray-700 rounded-2xl shadow-2xl shadow-sky-500/10" 
-                            frameborder="0">
-                        </iframe>
-                    </div>
+                      <h2 class="text-3xl font-bold text-white mb-12">Ou se preferir, fale com a Centelha agora!</h2>
+                      <div class="max-w-4xl mx-auto">
+                           <iframe data-src="https://centelha-e931b.web.app/" title="Chatbot Centelha - Assistente Virtual da Oficina FG Motos" class="w-full h-[70vh] min-h-[500px] border-2 border-gray-700 rounded-2xl shadow-2xl shadow-sky-500/10" frameborder="0"></iframe>
+                      </div>
                 </div>
             </section>
         </main>
     </div>
 
+    <!-- RODAPÉ -->
     <footer id="main-footer">
         <div class="bg-gray-900 border-t border-gray-800">
             <div class="container mx-auto px-4 py-8 flex flex-col items-center text-center text-gray-400">
@@ -258,25 +282,29 @@
         </div>
     </footer>
 
+    <!-- Modal para Imagem em Tela Cheia -->
     <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden items-center justify-center p-4">
         <span id="close-modal" class="absolute top-4 right-4 text-white text-5xl font-bold cursor-pointer hover:text-gray-400">&times;</span>
         <img id="modal-image" src="" alt="Imagem em tela cheia" class="max-w-full max-h-full object-contain rounded-lg">
     </div>
 
-    <script src="js/main.js"></script>
-
-    <div id="article-modal" class="fixed inset-0 bg-gray-900 bg-opacity-90 z-50 hidden items-center justify-center p-4" style="backdrop-filter: blur(8px);">
+    <!-- Modal para Artigos e Serviços -->
+    <div id="content-modal" class="fixed inset-0 bg-gray-900 bg-opacity-90 z-50 hidden items-center justify-center p-4" style="backdrop-filter: blur(8px);">
         <div class="bg-gray-800 w-full max-w-4xl h-full max-h-[90vh] rounded-2xl shadow-2xl flex flex-col border border-gray-700">
             <div class="flex-shrink-0 p-4 border-b border-gray-700 flex justify-between items-center">
-                <h3 class="text-lg font-semibold text-amber-400">Dicas da Oficina</h3>
-                <button id="close-article-modal" class="text-gray-400 hover:text-white transition-colors">
+                <h3 id="modal-title" class="text-lg font-semibold text-amber-400"></h3>
+                <button id="close-content-modal" class="text-gray-400 hover:text-white transition-colors">
                     <i data-lucide="x" class="w-8 h-8"></i>
                 </button>
             </div>
-            <div id="article-modal-body" class="flex-grow p-6 sm:p-8 overflow-y-auto">
-                </div>
+            <div id="modal-body" class="flex-grow p-6 sm:p-8 overflow-y-auto">
+                <!-- Conteúdo será injetado aqui -->
+            </div>
         </div>
     </div>
+
+    <!-- Nosso Arquivo JavaScript -->
+    <script src="js/main.js"></script>
 
 </body>
 </html>
